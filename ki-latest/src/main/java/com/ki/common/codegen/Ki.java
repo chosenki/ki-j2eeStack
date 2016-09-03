@@ -4,6 +4,7 @@
 package com.ki.common.codegen;
 
 
+import com.ki.common.codegen.tables.Student;
 import com.ki.common.codegen.tables.User;
 
 import java.util.ArrayList;
@@ -30,12 +31,17 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ki extends SchemaImpl {
 
-    private static final long serialVersionUID = 1742490044;
+    private static final long serialVersionUID = 1905152145;
 
     /**
      * The reference instance of <code>ki</code>
      */
     public static final Ki KI = new Ki();
+
+    /**
+     * The table <code>ki.STUDENT</code>.
+     */
+    public final Student STUDENT = com.ki.common.codegen.tables.Student.STUDENT;
 
     /**
      * The table <code>ki.USER</code>.
@@ -67,6 +73,7 @@ public class Ki extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
+            Student.STUDENT,
             User.USER);
     }
 }

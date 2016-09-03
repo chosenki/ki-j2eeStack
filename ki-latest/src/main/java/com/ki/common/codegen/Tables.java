@@ -4,6 +4,7 @@
 package com.ki.common.codegen;
 
 
+import com.ki.common.codegen.tables.Student;
 import com.ki.common.codegen.tables.User;
 
 import javax.annotation.Generated;
@@ -21,6 +22,11 @@ import javax.annotation.Generated;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
+
+    /**
+     * The table <code>ki.STUDENT</code>.
+     */
+    public static final Student STUDENT = com.ki.common.codegen.tables.Student.STUDENT;
 
     /**
      * The table <code>ki.USER</code>.
