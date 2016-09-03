@@ -4,6 +4,10 @@
 package com.ki.common.codegen;
 
 
+import com.ki.common.codegen.tables.Author;
+import com.ki.common.codegen.tables.Book;
+import com.ki.common.codegen.tables.BookStore;
+import com.ki.common.codegen.tables.BookToBookStore;
 import com.ki.common.codegen.tables.Student;
 import com.ki.common.codegen.tables.User;
 
@@ -31,12 +35,32 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ki extends SchemaImpl {
 
-    private static final long serialVersionUID = 1905152145;
+    private static final long serialVersionUID = -1438343811;
 
     /**
      * The reference instance of <code>ki</code>
      */
     public static final Ki KI = new Ki();
+
+    /**
+     * The table <code>ki.AUTHOR</code>.
+     */
+    public final Author AUTHOR = com.ki.common.codegen.tables.Author.AUTHOR;
+
+    /**
+     * The table <code>ki.BOOK</code>.
+     */
+    public final Book BOOK = com.ki.common.codegen.tables.Book.BOOK;
+
+    /**
+     * The table <code>ki.BOOK_STORE</code>.
+     */
+    public final BookStore BOOK_STORE = com.ki.common.codegen.tables.BookStore.BOOK_STORE;
+
+    /**
+     * The table <code>ki.BOOK_TO_BOOK_STORE</code>.
+     */
+    public final BookToBookStore BOOK_TO_BOOK_STORE = com.ki.common.codegen.tables.BookToBookStore.BOOK_TO_BOOK_STORE;
 
     /**
      * The table <code>ki.STUDENT</code>.
@@ -73,6 +97,10 @@ public class Ki extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
+            Author.AUTHOR,
+            Book.BOOK,
+            BookStore.BOOK_STORE,
+            BookToBookStore.BOOK_TO_BOOK_STORE,
             Student.STUDENT,
             User.USER);
     }

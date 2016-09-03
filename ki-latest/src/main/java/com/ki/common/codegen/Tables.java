@@ -4,6 +4,10 @@
 package com.ki.common.codegen;
 
 
+import com.ki.common.codegen.tables.Author;
+import com.ki.common.codegen.tables.Book;
+import com.ki.common.codegen.tables.BookStore;
+import com.ki.common.codegen.tables.BookToBookStore;
 import com.ki.common.codegen.tables.Student;
 import com.ki.common.codegen.tables.User;
 
@@ -22,6 +26,26 @@ import javax.annotation.Generated;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
+
+    /**
+     * The table <code>ki.AUTHOR</code>.
+     */
+    public static final Author AUTHOR = com.ki.common.codegen.tables.Author.AUTHOR;
+
+    /**
+     * The table <code>ki.BOOK</code>.
+     */
+    public static final Book BOOK = com.ki.common.codegen.tables.Book.BOOK;
+
+    /**
+     * The table <code>ki.BOOK_STORE</code>.
+     */
+    public static final BookStore BOOK_STORE = com.ki.common.codegen.tables.BookStore.BOOK_STORE;
+
+    /**
+     * The table <code>ki.BOOK_TO_BOOK_STORE</code>.
+     */
+    public static final BookToBookStore BOOK_TO_BOOK_STORE = com.ki.common.codegen.tables.BookToBookStore.BOOK_TO_BOOK_STORE;
 
     /**
      * The table <code>ki.STUDENT</code>.
