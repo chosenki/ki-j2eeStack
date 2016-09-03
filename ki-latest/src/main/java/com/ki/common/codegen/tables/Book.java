@@ -4,12 +4,8 @@
 package com.ki.common.codegen.tables;
 
 
-import com.ki.common.codegen.Keys;
 import com.ki.common.codegen.Ki;
 import com.ki.common.codegen.tables.records.BookRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.Generated;
 
@@ -17,7 +13,6 @@ import org.jooq.Field;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
-import org.jooq.UniqueKey;
 import org.jooq.impl.TableImpl;
 
 
@@ -34,7 +29,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Book extends TableImpl<BookRecord> {
 
-    private static final long serialVersionUID = 620635985;
+    private static final long serialVersionUID = 1858075912;
 
     /**
      * The reference instance of <code>ki.BOOK</code>
@@ -58,6 +53,11 @@ public class Book extends TableImpl<BookRecord> {
      * The column <code>ki.BOOK.AUTHOR_ID</code>.
      */
     public final TableField<BookRecord, Integer> AUTHOR_ID = createField("AUTHOR_ID", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
+    /**
+     * The column <code>ki.BOOK.TITLE</code>.
+     */
+    public final TableField<BookRecord, String> TITLE = createField("TITLE", org.jooq.impl.SQLDataType.VARCHAR.length(20), this, "");
 
     /**
      * Create a <code>ki.BOOK</code> table reference
@@ -87,22 +87,6 @@ public class Book extends TableImpl<BookRecord> {
     @Override
     public Schema getSchema() {
         return Ki.KI;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public UniqueKey<BookRecord> getPrimaryKey() {
-        return Keys.KEY_BOOK_PRIMARY;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<UniqueKey<BookRecord>> getKeys() {
-        return Arrays.<UniqueKey<BookRecord>>asList(Keys.KEY_BOOK_PRIMARY);
     }
 
     /**
