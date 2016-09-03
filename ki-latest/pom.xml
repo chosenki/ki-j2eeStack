@@ -11,6 +11,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ki-latest</artifactId>
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -42,9 +43,26 @@
         <logback.version>1.1.7</logback.version>
         <!--aspectj-->
         <aspectj.version>1.8.9</aspectj.version>
+        <!--lombok-->
+        <lombok.version>1.16.10</lombok.version>
+        <!--persistence-->
+        <persistence.version>1.0.2</persistence.version>
     </properties>
 
     <dependencies>
+        <!--persistence-->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>${persistence.version}</version>
+        </dependency>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
         <!--aspectj-->
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -218,6 +236,11 @@
         <dependency>
             <groupId>org.jooq</groupId>
             <artifactId>jooq</artifactId>
+            <version>${jooq.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq-codegen</artifactId>
             <version>${jooq.version}</version>
         </dependency>
 
