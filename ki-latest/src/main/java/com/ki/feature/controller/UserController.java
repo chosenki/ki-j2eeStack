@@ -21,7 +21,7 @@ public class UserController {
 
     @RequestMapping("/list.do")
     @ResponseBody
-    public List<UserRecord> index(){
+    public List<UserRecord> list(){
         return userService.getUserList();
     }
 
