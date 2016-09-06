@@ -35,18 +35,18 @@ public class UserServiceImpl implements UserService {
                 .from(u)
                 .fetch();
 
-        System.out.println("size:" + result.size());
+        logger.info("size:" + result.size());
 
         for (Record r : result) {
             Integer id = r.getValue(User.USER.ID);
             String name = r.getValue(User.USER.NAME);
             String address = r.getValue(User.USER.ADDRESS);
 
-            System.out.println("id: " + id + " name: " + name + " address: " + address);
+            logger.info("id: " + id + " name: " + name + " address: " + address);
             userVoList.add(new UserVo(id, name, address));
         }
 
-        System.out.println("getUserList");
+        logger.info("getUserList");
         return userVoList;
     }
 
