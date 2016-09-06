@@ -1,8 +1,8 @@
 package com.ki.feature.service;
 
 import com.ki.common.codegen.tables.User;
-import com.ki.common.codegen.tables.records.UserRecord;
 import com.ki.feature.api.UserService;
+import com.ki.feature.vo.UserVo;
 import org.jooq.DSLContext;
 import org.jooq.Record;
 import org.jooq.Record3;
@@ -27,27 +27,27 @@ public class UserServiceImpl implements UserService {
     private DSLContext dsl;
 
     @Override
-    public List<UserRecord> getUserList() {
+    public List<UserVo> getUserList() {
 
-        List<UserRecord> userRecordList = new ArrayList<UserRecord>();
+        List<UserVo> userVoList = new ArrayList<UserVo>();
         User u = User.USER.as("user");
-        Result<Record3<Integer, String, String>> result =dsl.select(u.ID,u.NAME,u.ADDRESS)
+        Result<Record3<Integer, String, String>> result = dsl.select(u.ID, u.NAME, u.ADDRESS)
                 .from(u)
                 .fetch();
 
-        System.out.println("size:"+result.size());
+        System.out.println("size:" + result.size());
 
         for (Record r : result) {
             Integer id = r.getValue(User.USER.ID);
             String name = r.getValue(User.USER.NAME);
             String address = r.getValue(User.USER.ADDRESS);
 
-            System.out.println("ID: " + id + " name: " + name + " address: " + address);
-            userRecordList.add(new UserRecord(id,name,address));
+            System.out.println("id: " + id + " name: " + name + " address: " + address);
+            userVoList.add(new UserVo(id, name, address));
         }
-        
+
         System.out.println("getUserList");
-        return userRecordList;
+        return userVoList;
     }
 
 }

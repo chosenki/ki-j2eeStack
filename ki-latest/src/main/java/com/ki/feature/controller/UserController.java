@@ -1,7 +1,7 @@
 package com.ki.feature.controller;
 
-import com.ki.common.codegen.tables.records.UserRecord;
 import com.ki.feature.api.UserService;
+import com.ki.feature.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +21,7 @@ public class UserController {
 
     @RequestMapping("/list.do")
     @ResponseBody
-    public List<UserRecord> list(){
+    public List<UserVo> list() {
         return userService.getUserList();
     }
 

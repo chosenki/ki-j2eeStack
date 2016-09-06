@@ -1,6 +1,6 @@
 package com.ki.feature.api;
 
-import com.ki.common.codegen.tables.records.UserRecord;
+import com.ki.feature.vo.UserVo;
 
 import java.util.List;
 
@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface UserService {
 
-    public List<UserRecord> getUserList();
+    public List<UserVo> getUserList();
 
 }

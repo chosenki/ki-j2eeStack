@@ -24,10 +24,10 @@ public class QueryTest {
         Author a = AUTHOR.as("a");
 
         Result<Record2<String, String>> result =
-        create.select(a.FIRST_NAME, a.LAST_NAME)
-              .from(a)
-              .orderBy(a.LAST_NAME)
-              .fetch();
+                create.select(a.FIRST_NAME, a.LAST_NAME)
+                        .from(a)
+                        .orderBy(a.LAST_NAME)
+                        .fetch();
 
         assertEquals(2, result.size());
         assertEquals("Paulo", result.getValue(0, a.FIRST_NAME));

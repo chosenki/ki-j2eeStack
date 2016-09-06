@@ -309,31 +309,31 @@
             </plugin>
 
             <!--<plugin>-->
-                <!--<groupId>org.flywaydb</groupId>-->
-                <!--<artifactId>flyway-maven-plugin</artifactId>-->
-                <!--<version>${flyway.version}</version>-->
+            <!--<groupId>org.flywaydb</groupId>-->
+            <!--<artifactId>flyway-maven-plugin</artifactId>-->
+            <!--<version>${flyway.version}</version>-->
 
-                <!--&lt;!&ndash; Note that we're executing the Flyway plugin in the "generate-sources" phase &ndash;&gt;-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<phase>generate-sources</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>migrate</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
+            <!--&lt;!&ndash; Note that we're executing the Flyway plugin in the "generate-sources" phase &ndash;&gt;-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<phase>generate-sources</phase>-->
+            <!--<goals>-->
+            <!--<goal>migrate</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
 
-                <!--&lt;!&ndash; Note that we need to prefix the db/migration path with filesystem: to prevent Flyway-->
-                     <!--from looking for our migration scripts only on the classpath &ndash;&gt;-->
-                <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<driver></driver>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<url>${db.url}</url>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<user>${db.username}</user>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<password></password>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<locations>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<location>filesystem:src/main/resources/db/migration</location>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</locations>&ndash;&gt;-->
-                <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
+            <!--&lt;!&ndash; Note that we need to prefix the db/migration path with filesystem: to prevent Flyway-->
+            <!--from looking for our migration scripts only on the classpath &ndash;&gt;-->
+            <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
+            <!--&lt;!&ndash;<driver></driver>&ndash;&gt;-->
+            <!--&lt;!&ndash;<url>${db.url}</url>&ndash;&gt;-->
+            <!--&lt;!&ndash;<user>${db.username}</user>&ndash;&gt;-->
+            <!--&lt;!&ndash;<password></password>&ndash;&gt;-->
+            <!--&lt;!&ndash;<locations>&ndash;&gt;-->
+            <!--&lt;!&ndash;<location>filesystem:src/main/resources/db/migration</location>&ndash;&gt;-->
+            <!--&lt;!&ndash;</locations>&ndash;&gt;-->
+            <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
             <!--</plugin>-->
 
         </plugins>

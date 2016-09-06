@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by Wangxiang on 2016/8/28.
  */
 @org.springframework.stereotype.Controller
-public class IndexController{
+public class IndexController {
 
     @Autowired
     private UserService userService;
 
     @RequestMapping("/index1.do")
-    public String index(){
+    public String index() {
         userService.getUserList();
         return "index";
     }

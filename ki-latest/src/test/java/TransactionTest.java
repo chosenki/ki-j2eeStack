@@ -2,7 +2,6 @@ import org.jooq.DSLContext;
 import org.jooq.exception.DataAccessException;
 import org.junit.After;
 import org.junit.Test;
-import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -20,7 +19,7 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"/config/ki-jdbc.xml"})
 @Rollback
-@Transactional(transactionManager="transactionManager")
+@Transactional(transactionManager = "transactionManager")
 public class TransactionTest {
 
     @Autowired

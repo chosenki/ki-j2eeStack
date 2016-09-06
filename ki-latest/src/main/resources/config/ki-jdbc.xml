@@ -7,7 +7,7 @@
 
     <context:property-placeholder location="classpath*:config/config.properties"/>
 
-    <context:annotation-config />
+    <context:annotation-config/>
 
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
@@ -26,28 +26,28 @@
 
     <bean id="transactionAwareDataSource"
           class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
-        <constructor-arg ref="dataSource" />
+        <constructor-arg ref="dataSource"/>
     </bean>
 
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <bean class="org.jooq.impl.DataSourceConnectionProvider" name="connectionProvider">
-        <constructor-arg ref="transactionAwareDataSource" />
+        <constructor-arg ref="transactionAwareDataSource"/>
     </bean>
 
     <bean class="org.jooq.impl.DefaultConfiguration" name="config">
         <property name="SQLDialect">
             <value type="org.jooq.SQLDialect">MYSQL</value>
         </property>
-        <property name="connectionProvider" ref="connectionProvider" />
+        <property name="connectionProvider" ref="connectionProvider"/>
     </bean>
 
     <!-- Configure the DSL object, optionally overriding jOOQ Exceptions with Spring Exceptions -->
     <bean id="dsl" class="org.jooq.impl.DefaultDSLContext">
-        <constructor-arg ref="config" />
+        <constructor-arg ref="config"/>
     </bean>
 
 </beans>
