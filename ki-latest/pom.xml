@@ -308,33 +308,69 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>-->
-            <!--<groupId>org.flywaydb</groupId>-->
-            <!--<artifactId>flyway-maven-plugin</artifactId>-->
-            <!--<version>${flyway.version}</version>-->
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>${flyway.version}</version>
 
-            <!--&lt;!&ndash; Note that we're executing the Flyway plugin in the "generate-sources" phase &ndash;&gt;-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<phase>generate-sources</phase>-->
-            <!--<goals>-->
-            <!--<goal>migrate</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
+                <!---->
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>migrate</goal>
+                        </goals>
+                    </execution>
+                </executions>
 
-            <!--&lt;!&ndash; Note that we need to prefix the db/migration path with filesystem: to prevent Flyway-->
-            <!--from looking for our migration scripts only on the classpath &ndash;&gt;-->
-            <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
-            <!--&lt;!&ndash;<driver></driver>&ndash;&gt;-->
-            <!--&lt;!&ndash;<url>${db.url}</url>&ndash;&gt;-->
-            <!--&lt;!&ndash;<user>${db.username}</user>&ndash;&gt;-->
-            <!--&lt;!&ndash;<password></password>&ndash;&gt;-->
-            <!--&lt;!&ndash;<locations>&ndash;&gt;-->
-            <!--&lt;!&ndash;<location>filesystem:src/main/resources/db/migration</location>&ndash;&gt;-->
-            <!--&lt;!&ndash;</locations>&ndash;&gt;-->
-            <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
-            <!--</plugin>-->
+                <!---->
+                <configuration>
+                    <initOnMigrate>true</initOnMigrate>
+                    <driver>com.mysql.jdbc.Driver</driver>
+                    <url>jdbc:mysql://192.168.0.23/ki?characterEncoding=UTF-8&amp;useSSL=false</url>
+                    <user>root</user>
+                    <password>root</password>
+                    <locations>
+                        <location>filesystem:src/main/resources/db/migration</location>
+                    </locations>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jooq</groupId>
+                <artifactId>jooq-codegen-maven</artifactId>
+                <version>${jooq.version}</version>
+
+                <!---->
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <!---->
+                <configuration>
+                    <jdbc>
+                        <driver>com.mysql.jdbc.Driver</driver>
+                        <url>jdbc:mysql://192.168.0.23/ki?characterEncoding=UTF-8&amp;useSSL=false</url>
+                        <user>root</user>
+                        <password>root</password>
+                    </jdbc>
+                    <generator>
+                        <database>
+                            <includes>.*</includes>
+                            <inputSchema>ki</inputSchema>
+                        </database>
+                        <target>
+                            <packageName>com.ki.feature.entity</packageName>
+                            <directory>src/main/java</directory>
+                        </target>
+                    </generator>
+                </configuration>
+            </plugin>
 
         </plugins>
     </build>
