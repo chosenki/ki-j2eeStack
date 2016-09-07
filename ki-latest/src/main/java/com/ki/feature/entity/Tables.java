@@ -10,6 +10,7 @@ import com.ki.feature.entity.tables.BookStore;
 import com.ki.feature.entity.tables.BookToBookStore;
 import com.ki.feature.entity.tables.SchemaVersion;
 import com.ki.feature.entity.tables.Student;
+import com.ki.feature.entity.tables.Teacher;
 import com.ki.feature.entity.tables.User;
 
 import javax.annotation.Generated;
@@ -57,6 +58,11 @@ public class Tables {
      * The table <code>ki.STUDENT</code>.
      */
     public static final Student STUDENT = com.ki.feature.entity.tables.Student.STUDENT;
+
+    /**
+     * The table <code>ki.TEACHER</code>.
+     */
+    public static final Teacher TEACHER = com.ki.feature.entity.tables.Teacher.TEACHER;
 
     /**
      * The table <code>ki.USER</code>.

@@ -8,10 +8,12 @@ import com.ki.feature.entity.tables.Author;
 import com.ki.feature.entity.tables.BookStore;
 import com.ki.feature.entity.tables.BookToBookStore;
 import com.ki.feature.entity.tables.SchemaVersion;
+import com.ki.feature.entity.tables.Teacher;
 import com.ki.feature.entity.tables.records.AuthorRecord;
 import com.ki.feature.entity.tables.records.BookStoreRecord;
 import com.ki.feature.entity.tables.records.BookToBookStoreRecord;
 import com.ki.feature.entity.tables.records.SchemaVersionRecord;
+import com.ki.feature.entity.tables.records.TeacherRecord;
 
 import javax.annotation.Generated;
 
@@ -46,6 +48,7 @@ public class Keys {
     public static final UniqueKey<BookStoreRecord> KEY_BOOK_STORE_PRIMARY = UniqueKeys0.KEY_BOOK_STORE_PRIMARY;
     public static final UniqueKey<BookToBookStoreRecord> KEY_BOOK_TO_BOOK_STORE_PRIMARY = UniqueKeys0.KEY_BOOK_TO_BOOK_STORE_PRIMARY;
     public static final UniqueKey<SchemaVersionRecord> KEY_SCHEMA_VERSION_PRIMARY = UniqueKeys0.KEY_SCHEMA_VERSION_PRIMARY;
+    public static final UniqueKey<TeacherRecord> KEY_TEACHER_PRIMARY = UniqueKeys0.KEY_TEACHER_PRIMARY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
@@ -61,5 +64,6 @@ public class Keys {
         public static final UniqueKey<BookStoreRecord> KEY_BOOK_STORE_PRIMARY = createUniqueKey(BookStore.BOOK_STORE, "KEY_BOOK_STORE_PRIMARY", BookStore.BOOK_STORE.ID);
         public static final UniqueKey<BookToBookStoreRecord> KEY_BOOK_TO_BOOK_STORE_PRIMARY = createUniqueKey(BookToBookStore.BOOK_TO_BOOK_STORE, "KEY_BOOK_TO_BOOK_STORE_PRIMARY", BookToBookStore.BOOK_TO_BOOK_STORE.ID);
         public static final UniqueKey<SchemaVersionRecord> KEY_SCHEMA_VERSION_PRIMARY = createUniqueKey(SchemaVersion.SCHEMA_VERSION, "KEY_schema_version_PRIMARY", SchemaVersion.SCHEMA_VERSION.VERSION);
+        public static final UniqueKey<TeacherRecord> KEY_TEACHER_PRIMARY = createUniqueKey(Teacher.TEACHER, "KEY_TEACHER_PRIMARY", Teacher.TEACHER.ID);
     }
 }

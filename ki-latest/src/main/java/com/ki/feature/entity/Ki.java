@@ -10,6 +10,7 @@ import com.ki.feature.entity.tables.BookStore;
 import com.ki.feature.entity.tables.BookToBookStore;
 import com.ki.feature.entity.tables.SchemaVersion;
 import com.ki.feature.entity.tables.Student;
+import com.ki.feature.entity.tables.Teacher;
 import com.ki.feature.entity.tables.User;
 
 import java.util.ArrayList;
@@ -36,7 +37,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ki extends SchemaImpl {
 
-    private static final long serialVersionUID = 294388511;
+    private static final long serialVersionUID = 1576117494;
 
     /**
      * The reference instance of <code>ki</code>
@@ -74,6 +75,11 @@ public class Ki extends SchemaImpl {
     public final Student STUDENT = com.ki.feature.entity.tables.Student.STUDENT;
 
     /**
+     * The table <code>ki.TEACHER</code>.
+     */
+    public final Teacher TEACHER = com.ki.feature.entity.tables.Teacher.TEACHER;
+
+    /**
      * The table <code>ki.USER</code>.
      */
     public final User USER = com.ki.feature.entity.tables.User.USER;
@@ -109,6 +115,7 @@ public class Ki extends SchemaImpl {
             BookToBookStore.BOOK_TO_BOOK_STORE,
             SchemaVersion.SCHEMA_VERSION,
             Student.STUDENT,
+            Teacher.TEACHER,
             User.USER);
     }
 }
