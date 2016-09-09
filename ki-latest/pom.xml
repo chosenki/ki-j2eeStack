@@ -13,6 +13,8 @@
     <artifactId>ki-latest</artifactId>
     <packaging>war</packaging>
 
+    
+
     <properties>
         <java.version>1.8</java.version>
         <!--最酷的ORM框架-->
