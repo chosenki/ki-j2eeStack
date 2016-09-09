@@ -4,8 +4,14 @@
 package com.ki.feature.entity;
 
 
+import com.ki.feature.entity.tables.Author;
+import com.ki.feature.entity.tables.Book;
+import com.ki.feature.entity.tables.BookStore;
+import com.ki.feature.entity.tables.BookToBookStore;
 import com.ki.feature.entity.tables.SchemaVersion;
+import com.ki.feature.entity.tables.Student;
 import com.ki.feature.entity.tables.Teacher;
+import com.ki.feature.entity.tables.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +37,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ki extends SchemaImpl {
 
-    private static final long serialVersionUID = -1522710746;
+    private static final long serialVersionUID = 1576117494;
 
     /**
      * The reference instance of <code>ki</code>
@@ -39,14 +45,44 @@ public class Ki extends SchemaImpl {
     public static final Ki KI = new Ki();
 
     /**
+     * The table <code>ki.AUTHOR</code>.
+     */
+    public final Author AUTHOR = com.ki.feature.entity.tables.Author.AUTHOR;
+
+    /**
+     * The table <code>ki.BOOK</code>.
+     */
+    public final Book BOOK = com.ki.feature.entity.tables.Book.BOOK;
+
+    /**
+     * The table <code>ki.BOOK_STORE</code>.
+     */
+    public final BookStore BOOK_STORE = com.ki.feature.entity.tables.BookStore.BOOK_STORE;
+
+    /**
+     * The table <code>ki.BOOK_TO_BOOK_STORE</code>.
+     */
+    public final BookToBookStore BOOK_TO_BOOK_STORE = com.ki.feature.entity.tables.BookToBookStore.BOOK_TO_BOOK_STORE;
+
+    /**
      * The table <code>ki.schema_version</code>.
      */
     public final SchemaVersion SCHEMA_VERSION = com.ki.feature.entity.tables.SchemaVersion.SCHEMA_VERSION;
 
     /**
+     * The table <code>ki.STUDENT</code>.
+     */
+    public final Student STUDENT = com.ki.feature.entity.tables.Student.STUDENT;
+
+    /**
      * The table <code>ki.TEACHER</code>.
      */
     public final Teacher TEACHER = com.ki.feature.entity.tables.Teacher.TEACHER;
+
+    /**
+     * The table <code>ki.USER</code>.
+     */
+    public final User USER = com.ki.feature.entity.tables.User.USER;
 
     /**
      * No further instances allowed
@@ -73,7 +109,13 @@ public class Ki extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
+            Author.AUTHOR,
+            Book.BOOK,
+            BookStore.BOOK_STORE,
+            BookToBookStore.BOOK_TO_BOOK_STORE,
             SchemaVersion.SCHEMA_VERSION,
-            Teacher.TEACHER);
+            Student.STUDENT,
+            Teacher.TEACHER,
+            User.USER);
     }
 }
