@@ -13,7 +13,7 @@
     <artifactId>ki-latest</artifactId>
     <packaging>war</packaging>
 
-    
+
 
     <properties>
         <java.version>1.8</java.version>
@@ -329,9 +329,9 @@
                 <configuration>
                     <initOnMigrate>true</initOnMigrate>
                     <driver>com.mysql.jdbc.Driver</driver>
-                    <url>jdbc:mysql://192.168.0.23/ki?characterEncoding=UTF-8&amp;useSSL=false</url>
+                    <url>jdbc:mysql://192.168.50.4/ki?characterEncoding=UTF-8&amp;useSSL=false</url>
                     <user>root</user>
-                    <password>root</password>
+                    <password>root@qs</password>
                     <locations>
                         <location>filesystem:src/main/resources/db/migration</location>
                     </locations>
@@ -357,9 +357,9 @@
                 <configuration>
                     <jdbc>
                         <driver>com.mysql.jdbc.Driver</driver>
-                        <url>jdbc:mysql://192.168.0.23/ki?characterEncoding=UTF-8&amp;useSSL=false</url>
+                        <url>jdbc:mysql://192.168.50.4/ki?characterEncoding=UTF-8&amp;useSSL=false</url>
                         <user>root</user>
-                        <password>root</password>
+                        <password>root@qs</password>
                     </jdbc>
                     <generator>
                         <database>
