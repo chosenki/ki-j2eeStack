@@ -1,0 +1,14 @@
+{
+  "name": "ki-front",
+  "version": "0.0.1",
+  "dependencies": {
+    "foundation": "^4.2.1-1",
+    "react": "^15.3.1",
+    "react-foundation": "^0.6.8",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  }
+}
